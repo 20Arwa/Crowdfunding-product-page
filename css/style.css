@@ -1,0 +1,320 @@
+* {box-sizing: border-box}
+/* General */
+p {line-height: 1.5; color:hsl(0, 0%, 40%)}
+
+.flex {display: flex; justify-content: space-between; align-items: center}
+
+input {
+    color: white;
+    padding: 15px 30px;
+    background-color: hsl(176, 50%, 47%);
+    border: none;
+    border-radius: 50px;
+}
+input:hover {cursor: pointer}
+
+input:hover:not(input[type="text"]) {cursor: pointer; background-color: hsl(176, 72%, 28%)}
+
+body {
+    margin:0; 
+    font-size: 16px;
+    font-family: 'Commissioner', sans-serif; 
+    background-color: #fafafa;  
+    position: relative;
+}
+/* Start Header */
+header {
+    min-height: 400px;
+    color: white;
+    background-size: cover;
+    background-image: url(../images/image-hero-desktop.jpg);
+}
+header nav {padding: 0 100px; position: relative}
+
+@media (max-width: 600px) {
+    header {background-image: url(../images/image-hero-mobile.jpg)}
+
+    header nav {padding: 0 30px}
+}
+header nav > div {padding: 0}
+
+header nav > div a {display: inline-flex; justify-content: space-between; margin-left: 20px}
+
+header nav > div a:hover {cursor: pointer; text-decoration: underline}
+
+header nav img {display: none}
+
+@media (max-width: 600px) {
+    header nav > div {
+        width: 90%;
+        position: absolute;
+        top: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
+    }
+    header nav > div a {
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        color: black;
+        font-weight: 500;
+        display: block;
+        background-color: white;
+        border-bottom: 1px solid hsl(0, 0%, 48%);
+    }
+    header nav > div a:first-of-type {border-radius: 10px 10px 0 0}
+
+    header nav > div a:last-of-type {border-radius: 0 0 10px 10px}
+
+    header nav img:first-of-type {display: unset}
+}
+/* End Header */
+.container {width: 60%; margin: -100px auto auto}
+
+.container .section {
+    padding: 50px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    background-color: white;
+}
+@media (max-width: 900px) {
+    .container {width: 90%}
+
+    .container .section {padding: 50px 20px}
+}
+/* Start Intro */
+.container > .intro {text-align: center; position: relative}
+
+.container > .intro > img {
+    position: absolute;
+    top: -7%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.intro > h2 {margin-bottom: 0}
+
+.intro > div {margin-top: 40px}
+
+@media (max-width: 600px) {.intro > div {justify-content: space-evenly}}
+
+.intro > div > div {align-items: stretch}
+
+.intro > div > div svg {margin-right: -25px; z-index: 2}
+
+.intro > div > div svg circle {r: 27}
+
+.intro > div > div:hover svg circle {fill: hsl(176, 72%, 28%)}
+
+.intro > div > div:hover svg path {fill: hsl(0, 0%, 90%)}
+
+.intro > div > div p {
+    margin: 0;
+    line-height: 200%;
+    font-weight: 500;
+    padding: 10px 20px 10px 40px;
+    border-radius: 0 50px 50px 0;
+    background-color: #f4f4f4;
+}
+@media (max-width: 600px) {.intro > div > div p {display: none}}
+
+.intro > div > div:hover p {font-weight: 600; color: hsl(176, 72%, 28%)}
+/* Start Backers */
+.backers .numbers {justify-content: flex-start}
+
+@media (max-width: 600px) {
+    .backers .numbers {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.backers .numbers > div:first-of-type {padding-right: 50px}
+
+.backers .numbers > div:not(:first-of-type) {padding: 0 50px; border-left: 1px solid hsl(0, 0%, 90%)}
+
+.backers .numbers > div > h1 {margin: 0 0 15px}
+
+@media (max-width: 600px) {
+    .container .backers .numbers > div {padding: 20px 0; border-left: 0}
+
+    .backers .numbers > div:not(:last-of-type) {margin-bottom: 10px; border-bottom: 1px solid hsl(0, 0%, 90%)}
+
+    .backers .numbers > div > h1 {margin: 0}
+}
+.backers .numbers > div > p {margin: 0}
+
+.backers > div:last-of-type {
+    margin-top: 40px;
+    width: 100%;
+    height: 15px;
+    border-radius: 20px;
+    background-color: #f4f4f4;
+}
+.backers > div:last-of-type span {
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: hsl(176, 50%, 47%);
+}
+/* Start About */
+.about > .text {margin-bottom: 60px}
+
+.about > .text > h3 {margin: 0 auto 40px}
+
+.pay {
+    margin-top: 30px; 
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid #c2c0c0;
+}
+@media (max-width: 600px) {.pay {padding: 25px}}
+
+.zeroleft {opacity: 30%}
+
+.zeroleft input[type="button"] {background-color: hsl(0, 0%, 40%)}
+
+.zeroleft input[type="button"]:hover{cursor: auto}
+
+.pay > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.pay > div:first-of-type h3 {margin: 0 0 10px 0}
+
+@media (max-width: 600px) {
+    .pay > div {flex-direction: column; align-items: flex-start}
+
+    .pay > div:nth-of-type(2) h2 {font-size: 30px; margin: 10px 0 20px}
+}
+.pay > div:first-of-type p {margin-top: 0; font-weight: 500; color: hsl(176, 50%, 47%)}
+
+.pay h2 {margin: 0; display: flex; align-items: center}
+
+.pay h2 span {
+    margin-left: 6px;
+    font-size: 14px;
+    font-weight: 100;
+    color: hsl(0, 0%, 40%)
+}
+.background.section {
+    height: 100%;
+    padding-top: 265px;
+    border-radius: 0;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 2;
+    background-color: hsl(0, 0%, 40%, 30%);
+}
+.back {
+    margin: 0 auto;
+    width: 65%;
+    display: none;
+    position: sticky;
+    top: 0
+}
+@media (max-width: 900px) {
+    .background {padding: 90px 5px 5px !important}
+
+    .back {width: 90%}
+}
+@media (max-width: 600px) {.back {width: 100%}}
+
+.back > div:first-of-type h2 {margin: 0}
+
+.back > div:first-of-type svg:hover path {cursor: pointer; fill: black; opacity: .7}
+
+.back > p {margin: 20px auto}
+
+.back .pay {padding: 35px 0px 25px; position: relative}
+
+.back .pay > div:first-of-type {justify-content: flex-start; padding: 0 30px; position: relative}
+
+.back .pay > div:first-of-type > span {
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    margin: 8px 20px 0 -5px;
+    border-radius: 50%;
+    outline: 1px solid hsl(0, 0%, 80%);
+    border: 5px solid white;
+}
+.back .pay > div:first-of-type h3 {margin: 0}
+
+.back .pay.valid:hover > div:first-of-type h3 {color: hsl(176, 50%, 47%)}
+
+.back .pay > div:first-of-type p {font-weight: 600; margin: 5px 0 0 20px}
+
+@media (max-width: 600px) {
+    .back .pay > div:first-of-type {padding: 0 20px}
+
+    .back .pay > div:first-of-type > span {margin: -10px 0px 10px -5px}
+
+    .back .pay > div:first-of-type p {margin: 0}
+}
+.back .pay > div:first-of-type h2 {top: 13%; right: 5%; position: absolute}
+
+.back .pay > p {padding: 0 60px 0; margin-bottom: 0;}
+
+@media (max-width: 600px) {
+    .back .pay > div:first-of-type h2 {top: 320%; left: 10%}
+
+    .back .pay > p {padding: 0 20px 40px 20px}
+}
+.back .pay > .pledge {
+    padding: 20px 30px 0;
+    margin-top: 20px;
+    border-top: 1px solid hsl(0, 0%, 48%);
+    display: none; 
+}
+@media (max-width: 600px) {
+    .back .pay .pledge {align-items: center}
+
+    .back .pay .pledge > p {margin-top: 0}
+}
+.back .pay > .pledge > div {text-align: right}
+
+.back .pay > .pledge > div > div {position: relative}
+
+.back .pay > .pledge > div > div::after {
+    content: "$";
+    color: hsl(0, 0%, 80%);
+    font-weight: 600;
+    position: absolute;
+    top: 30%;
+    left: 18%;
+}
+.back > div:nth-of-type(2) > div:last-of-type {justify-content: flex-end}
+
+.back .pay > .pledge input[type="text"] {
+    width: 100px;
+    margin-right: 10px;
+    padding: 14px 35px;
+    color: black;
+    font-weight: 600;
+    align-self: flex-start;
+    background-color: white;
+    border: 1px solid hsl(0, 0%, 48%);
+}
+.back .pay > .pledge input[type="text"]:focus {outline: none; border: 1.5px solid hsl(176, 50%, 47%)}
+/* Start Thank */
+.thank {
+    text-align: center;
+    margin: 180px auto;
+    width: 40%;
+    display: none;
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@media (max-width: 900px) {.thank {width: 70%}}
+
+@media (max-width: 600px) {.thank {width: 100%}}
+
+.attribution { font-size: 11px; text-align: center}
+
+.attribution a { color: hsl(228, 45%, 44%)}
